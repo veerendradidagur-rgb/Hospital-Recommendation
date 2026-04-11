@@ -1,0 +1,47 @@
+HOW TO RUN THE HOTEL MANAGEMENT SYSTEM
+====================================
+
+STEP 1: SETUP DATABASE
+----------------------
+1. Open MySQL Command Prompt:
+   mysql -u root -p
+   
+2. Create database and tables:
+   CREATE DATABASE hospitality_db;
+   USE hospitality_db;
+   
+   Then copy-paste the contents of database_schema.sql file
+
+OR run this command:
+   mysql -u root -p hospitality_db < database_schema.sql
+
+STEP 2: RUN THE APPLICATION
+-----------------------------
+METHOD 1: Double-click run.bat file
+METHOD 2: From command line:
+   cd e:\HotelManagement
+   run.bat
+
+METHOD 3: From Eclipse/IDE:
+   - Import project
+   - Add lib\mysql-connector-j-9.6.0.jar to build path
+   - Run Main.java
+
+STEP 3: WHAT TO EXPECT
+---------------------
+- A window will open with 4 tabs: Hotels, Rooms, Guests, Reservations
+- You can add, edit, delete records
+- All data is saved to MySQL database
+
+IF YOU GET ERRORS:
+------------------
+1. "Column 'type' not found" -> Database tables not created properly
+2. "Access denied" -> Wrong MySQL password
+3. "Class not found" -> MySQL driver not in classpath
+
+TROUBLESHOOTING:
+---------------
+1. Make sure MySQL server is running
+2. Verify database exists: SHOW DATABASES;
+3. Check tables: USE hospitality_db; SHOW TABLES;
+4. Test connection manually with your credentials

@@ -1,0 +1,9 @@
+@echo off
+echo Testing GUI launch...
+echo Compiling...
+javac -cp "lib\mysql-connector-j-9.6.0.jar" -d bin src\*.java src\*\*.java src\*\*\*.java
+
+echo Running GUI...
+java -cp "bin;lib\mysql-connector-j-9.6.0.jar" gui.HotelManagementGUI
+
+pause
